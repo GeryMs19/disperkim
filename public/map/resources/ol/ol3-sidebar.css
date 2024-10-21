@@ -1,0 +1,214 @@
+.sidebar2 {
+  position: absolute;
+  margin-top: 52px;
+  margin-right: 10px;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  z-index: 2000; }
+  .sidebar2.collapsed {
+    width: 40px; }
+  @media (min-width: 768px) {
+    .sidebar2 {
+      top: 6px;
+      bottom: 6px;
+      transition: width 500ms; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar2 {
+      width: 305px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar2 {
+      width: 390px; } }
+  @media (min-width: 1200px) {
+    .sidebar2 {
+      width: 460px; } }
+
+.sidebar2-left {
+  left: 0; }
+  @media (min-width: 768px) {
+    .sidebar2-left {
+      left: 6px; } }
+
+.sidebar2-right {
+  right: 0; }
+  @media (min-width: 768px) {
+    .sidebar2-right {
+      right: 6px; } }
+
+.sidebar2-tabs {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #fff; }
+  .sidebar2-left .sidebar2-tabs {
+    left: 0; }
+  .sidebar2-right .sidebar2-tabs {
+    right: 0; }
+  .sidebar2-tabs, .sidebar2-tabs > ul {
+    position: absolute;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .sidebar2-tabs > li, .sidebar2-tabs > ul > li {
+      width: 100%;
+      height: 40px;
+      color: #000;
+      font-size: 12pt;
+      overflow: hidden;
+      transition: all 80ms; }
+      .sidebar2-tabs > li:hover, .sidebar2-tabs > ul > li:hover {
+        color: #000;
+        background-color: #eee; }
+      .sidebar2-tabs > li.active, .sidebar2-tabs > ul > li.active {
+        color: #fff;
+        background-color: #0074d9; }
+      .sidebar2-tabs > li.disabled, .sidebar2-tabs > ul > li.disabled {
+        color: rgba(51, 51, 51, 0.4); }
+        .sidebar2-tabs > li.disabled:hover, .sidebar2-tabs > ul > li.disabled:hover {
+          background: transparent; }
+        .sidebar2-tabs > li.disabled > a, .sidebar2-tabs > ul > li.disabled > a {
+          cursor: default; }
+      .sidebar2-tabs > li > a, .sidebar2-tabs > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        color: inherit;
+        text-decoration: none;
+        text-align: center; }
+  .sidebar2-tabs > ul + ul {
+    bottom: 0; }
+
+.sidebar2-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .sidebar2-left .sidebar2-content {
+    left: 40px;
+    right: 0; }
+  .sidebar2-right .sidebar2-content {
+    left: 0;
+    right: 40px; }
+  .sidebar2.collapsed > .sidebar2-content {
+    overflow-y: hidden; }
+
+.sidebar2-pane {
+  display: none;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 10px 20px; }
+  .sidebar2-pane.active {
+    display: block; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar2-pane {
+      min-width: 265px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar2-pane {
+      min-width: 350px; } }
+  @media (min-width: 1200px) {
+    .sidebar2-pane {
+      min-width: 420px; } }
+
+.sidebar2-header {
+  margin: -10px -20px 0;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  font-size: 14.4pt;
+  color: #fff;
+  background-color: #0074d9; }
+  .sidebar2-right .sidebar2-header {
+    padding-left: 40px; }
+
+.sidebar2-close {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer; }
+  .sidebar2-left .sidebar2-close {
+    right: 0; }
+  .sidebar2-right .sidebar2-close {
+    left: 0; }
+
+.sidebar2 {
+  background-color: rgba(255, 255, 255, 0.4); }
+  @media (min-width: 768px) {
+    .sidebar2 {
+      border: 3px solid transparent;
+      border-radius: 4px; } }
+
+.sidebar2-left {
+  border-right: 3px solid transparent; }
+
+.sidebar2-right {
+  border-left: 3px solid transparent; }
+
+.sidebar2-tabs {
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    .sidebar2-tabs {
+      border-radius: 2px 0 0 2px; }
+      .collapsed .sidebar2-tabs {
+        border-radius: 2px; } }
+
+@media (min-width: 768px) {
+  .sidebar2-content {
+    border-radius: 0 2px 2px 0; } }
+
+.sidebar2-left ~ .sidebar2-map .ol2-zoom, .sidebar2-left ~ .sidebar2-map .ol2-scale-line {
+  margin-left: 46px; }
+  @media (min-width: 768px) {
+    .sidebar2-left ~ .sidebar2-map .ol2-zoom, .sidebar2-left ~ .sidebar2-map .ol2-scale-line {
+      transition: margin-left 500ms; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar2-left ~ .sidebar2-map .ol2-zoom, .sidebar2-left ~ .sidebar2-map .ol2-scale-line {
+      margin-left: 317px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar2-left ~ .sidebar2-map .ol2-zoom, .sidebar2-left ~ .sidebar2-map .ol2-scale-line {
+      margin-left: 402px; } }
+  @media (min-width: 1200px) {
+    .sidebar2-left ~ .sidebar2-map .ol2-zoom, .sidebar2-left ~ .sidebar2-map .ol2-scale-line {
+      margin-left: 472px; } }
+
+@media (min-width: 768px) {
+  .sidebar2-left.collapsed ~ .sidebar2-map .ol2-zoom, .sidebar2-left.collapsed ~ .sidebar2-map .ol2-scale-line {
+    margin-left: 52px; } }
+
+.sidebar2-right ~ .sidebar2-map .ol2-rotate,
+.sidebar2-right ~ .sidebar2-map .ol2-attribution,
+.sidebar2-right ~ .sidebar2-map .ol2-full-screen {
+  margin-right: 46px; }
+  @media (min-width: 768px) {
+    .sidebar2-right ~ .sidebar2-map .ol2-rotate,
+    .sidebar2-right ~ .sidebar2-map .ol2-attribution,
+    .sidebar2-right ~ .sidebar2-map .ol2-full-screen {
+      transition: margin-right 500ms; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar2-right ~ .sidebar2-map .ol2-rotate,
+    .sidebar2-right ~ .sidebar2-map .ol2-attribution,
+    .sidebar2-right ~ .sidebar2-map .ol2-full-screen {
+      margin-right: 317px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar2-right ~ .sidebar2-map .ol2-rotate,
+    .sidebar2-right ~ .sidebar2-map .ol2-attribution,
+    .sidebar2-right ~ .sidebar2-map .ol2-full-screen {
+      margin-right: 402px; } }
+  @media (min-width: 1200px) {
+    .sidebar2-right ~ .sidebar2-map .ol2-rotate,
+    .sidebar2-right ~ .sidebar2-map .ol2-attribution,
+    .sidebar2-right ~ .sidebar2-map .ol2-full-screen {
+      margin-right: 472px; } }
+
+@media (min-width: 768px) {
+  .sidebar2-right.collapsed ~ .sidebar2-map .ol2-rotate,
+  .sidebar2-right.collapsed ~ .sidebar2-map .ol2-attribution,
+  .sidebar2-right.collapsed ~ .sidebar2-map .ol2-full-screen {
+    margin-right: 52px; } }

@@ -1,0 +1,883 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, *:fullscreen, *:-webkit-full-screen, *:-moz-full-screen {
+  background-color: white !important;
+  z-index:1;
+}
+
+::backdrop {
+  z-index:0;
+  background-color: white !important;
+}
+
+body{
+    overflow: hidden;
+}
+
+
+#map {
+  display:flex;
+  height: 645px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 400px) and ( max-height: 812px) {
+  #map {
+    height: 750px;
+  }
+}
+
+
+@media (min-width: 401px) and ( min-height: 813px) {
+  #map {
+    height: 850px;
+  }
+}
+
+@media (min-height: 1000px) {
+  #map {
+    height: 1005px;
+  }
+}
+
+
+
+
+
+
+
+.ol-popup {
+  display: none;
+}
+
+.mousePosition {
+  position: fixed;
+  right: 2px;
+  bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  color: #adb5bd;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+  }
+  .ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+  }
+  .ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+  }
+  .ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+  }
+  .ol-popup-closer:after {
+    content: "✖";
+  }
+
+.myButton {
+    background-color:rgba(22, 85, 167, 0.6);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+    border: none;
+    border-radius: 8px;
+    /* align-items: center; */
+    /* padding-top: 3px; */
+}
+
+.myButton:hover{
+  background-color: rgb(0, 60, 136, 1);
+}
+
+.myButton.clicked{
+  background-color: rgba(22, 170, 35, 0.8);
+}
+
+.myButton.clicked:hover{
+background-color: rgba(22, 170, 35, 1);
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="myButton"] {
+    width: 100%;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+  [class*="myButton"] {
+    width: 100%;
+    height: 24px;
+    width: 23px;
+  }
+}
+
+
+/* .homeButtonDiv{
+  position: relative;
+  display: block;
+  margin: 10px auto auto 10px;
+} */
+
+.toolbarDiv {
+  position: flex;
+  width: 490px;
+  height: 50px;
+  display: flex;
+  margin: 0 auto 0;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 2px;
+  background: rgb(245,247,251);
+  background: linear-gradient(180deg, rgba(245,247,251,1) 0%, rgba(39,125,161,1) 82%, rgba(87,117,144,1) 100%);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 4px 2px -2px #577590;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="toolbarDiv"] {
+    width: 90%;
+    gap: 1px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+  [class*="toolbarDiv"] {
+    width: 97%;
+    gap: 1px;
+  }
+}
+
+ .homeButtonDiv{
+  /* position: absolute; */
+  display: block;
+  /* margin: 10px auto auto 10px; */
+  /* top: 10px;
+  left: 10px; */
+}
+
+.fsButtonDiv {
+  /* position: absolute; */
+  display: block;
+  /* margin: 1px auto auto 10px; */
+}
+
+.featureInfoDiv {
+    position: relative;
+    display: block;
+    margin: 1px auto auto 10px;
+}
+
+.lengthButtonDiv {
+  position: relative;
+  display: block;
+  margin: 1px auto auto 10px;
+}
+
+.areaButtonDiv {
+  position: relative;
+  display: block;
+  margin: 1px auto auto 10px;
+}
+
+  /* start : Measure styling */
+
+  .ol-tooltip {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+    opacity: 0.7;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  .ol-tooltip-measure {
+    opacity: 1;
+    font-weight: bold;
+  }
+  .ol-tooltip-static {
+    background-color: #ffcc33;
+    color: black;
+    border: 1px solid white;
+  }
+  .ol-tooltip-measure:before,
+  .ol-tooltip-static:before {
+    border-top: 6px solid rgba(0, 0, 0, 0.5);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    margin-left: -7px;
+    left: 50%;
+  }
+  .ol-tooltip-static:before {
+    border-top-color: #ffcc33;
+  }
+
+  /* end : Measure styling */
+
+  .ziButtonDiv {
+    position: relative;
+    display: block;
+    margin: 1px auto auto 10px;
+  }
+
+  .zoButtonDiv {
+    position: relative;
+    display: block;
+    margin: 1px auto auto 10px;
+  }
+
+  .myButtonDiv {
+    position: relative;
+    display: block;
+    /* margin: 1px auto auto 10px; */
+    padding-top: 3px;
+  }
+
+  .ol-dragbox {
+    border: 2px dashed grey;
+    background-color: rgba(200, 200, 200, 0.6);
+  }
+
+  .toggleAttQueryDiv {
+    display: block;
+    position: absolute;
+  }
+
+  .toggleAttributeListDiv {
+    display: block;
+    position: absolute;
+  }
+
+  .layersDiv {
+    position: absolute;
+    display: none;
+    top: 100px;
+    margin: 65px auto;
+    width: 250px;
+    /* height: 500px; */
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.45;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    /* z-index: 4; */
+    /* overflow: scroll; */
+  }
+
+  .layersDiv:empty{
+    display: none;
+  }
+
+  .layer-switcher {
+    position: initial;
+    top: 0px;
+    right: 0px;
+  }
+
+  .layer-switcher ul {
+margin: 1em 0.4em;
+  }
+
+  .attQueryDiv {
+    position: absolute;
+    display: none;
+    top: 150px;
+    /* margin: 65px auto auto 45px; */
+    width: 250px;
+    /* height: 250px; */
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.45;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 0px 15px rgba(100, 100, 100, 0.5);
+    /* z-index: 4; */
+    /* overflow: scroll; */
+  }
+
+  .attQueryDiv select {
+    width: 225px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin: 0px auto 20px 10px;
+  }
+
+  .attQueryDiv input {
+    width: 225px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin: 0px auto 20px 10px;
+  }
+
+  .attQueryDiv label {
+    color: grey;
+    margin: 10px 10px 0px 10px;
+  }
+
+  /* .attQueryDiv label:nth-child(1) {
+    margin: 10px;
+    font-weight: bold;
+   } */
+
+  .attQryRun {
+    color: white;
+    background-color: green;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 35px;
+    width: 50px;
+    margin: 10px 10px 10px 110px;
+  }
+
+
+  .attListDiv {
+    position: absolute;
+    display: none;
+    margin: 350px auto auto 350px;
+    /* padding: 10px; */
+    width: auto;
+    max-width: 750px;
+    /* height: auto; */
+    /* max-height: 250px; */
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.45;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    /* z-index: 5; */
+    overflow: scroll;
+    top:100px;
+  }
+
+  #attQryTable {
+    padding: 0;
+    border-collapse: collapse;
+  }
+
+  #attQryTable, td, th {
+    padding: 0px 5px 0px 5px;
+    border: 1px solid black;
+  }
+
+  #attQryTable th {
+    color: white;
+    background-color: #00B4CC;
+    position: sticky;
+    top: 0;
+    font-style: normal;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+  }
+
+  #attQryTable tr:hover
+  /* {font-weight: bolder; background-color: rgb(225, 225, 225);} */
+  {background-color: lightgrey;}
+
+  #headerDiv{
+    background-color: #00B4CC;
+    height: 35px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  #headerDiv label {
+  color: white;
+  margin: 10px;
+  font-weight: bold;
+  }
+
+  .spQueryDiv {
+    position: absolute;
+    display: none;
+    top: 150px;
+    /* margin: 65px auto auto 45px; */
+    width: 250px;
+    /* height: 250px; */
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.45;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 0px 15px rgba(100, 100, 100, 0.5);
+    /* z-index: 4; */
+    /* overflow: scroll; */
+  }
+
+  .spQueryDiv select {
+    width: 225px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin: 0px auto 20px 10px;
+  }
+
+  .spQueryDiv input {
+    width: 225px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin: 0px auto 20px 10px;
+  }
+
+  .spQueryDiv label {
+    color: grey;
+    margin: 10px 10px 0px 10px;
+  }
+
+  /* .attQueryDiv label:nth-child(1) {
+    margin: 10px;
+    font-weight: bold;
+   } */
+
+  .spQryRun {
+    color: white;
+    background-color: green;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 35px;
+    width: 50px;
+    margin: 10px 22px 10px 22px;
+  }
+
+  .spQryClear {
+    /* position: absolute; */
+    color: white;
+    background-color: slategrey;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 35px;
+    width: 50px;
+    margin: 10px;
+  }
+
+.attQryClear{
+  color: white;
+  background-color: slategrey;
+  border-radius: 3px;
+  border: 1px solid black;
+  height: 35px;
+  width: 50px;
+  margin: 10px;
+}
+
+  .spUserInput{
+    color: white;
+    background-color: rgb(95, 125, 207);
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 35px;
+    width: 50px;
+    margin: 10px;
+  }
+
+  #bufferDistance  {
+width: 100px;
+  }
+
+  #distanceUnits {
+width: 100px;
+margin: 0px auto 0px 20px;;
+  }
+
+  .spUserInput.clicked{
+    background-color: rgb(230, 107, 107);
+  }
+
+
+
+
+  .settingsDiv {
+    position: absolute;
+    display: none;
+    margin: 65px auto;
+    top: 100px;
+    width: 250px;
+    /* height: 250px; */
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.45;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 0px 15px rgba(100, 100, 100, 0.5);
+    /* z-index: 4; */
+    /* overflow: scroll; */
+  }
+
+  .settingsDiv select {
+    width: 225px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin: 0px auto 20px 10px;
+  }
+
+
+  .settingsDiv label {
+    color: grey;
+    margin: 10px 10px 0px 10px;
+  }
+
+  .editingControlsDiv {
+    position: absolute;
+    display: none;
+    top: 373px;
+    left: 45px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 0px 15px rgba(100, 100, 100, 0.5);
+  }
+
+  div#addFeatureButtonDiv.myButtonDiv {
+    padding-top: 0px;
+  }
+
+  .myImg {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    filter:brightness(0) invert(1);
+  }
+
+
+
+  .myButton .tooltiptext {
+    visibility: visible;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 9px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    /* bottom: 125%; */
+    left: 125%;
+    /* margin-left: -60px; */
+    opacity: 0;
+    transition: opacity 0.3s;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-style: normal;
+  }
+
+  .myButton .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #000 transparent transparent;
+  }
+
+  .myButton:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+ /*** start : CSS for search bar ***/
+
+/* html,body{height:100%;margin:0;}body{background:#913D88;font:13px monospace;color:#FFFFFF}p{margin-top:30px}.cntr{display:table;width:100%;height:100%;.cntr-innr{display:table-cell;text-align:center;vertical-align:middle}} */
+
+/*** STYLES ***/
+/*** STYLES ***/
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 50%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchTerm2 {
+  padding: 0 5px /* 0 is for top and bottom | 5px is for left and right */;
+  width: 20%;
+  border: 2px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm2:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap-search{
+  opacity: 95%;
+  width: 55%;
+  position: absolute;
+  top: 19%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="wrap-search"] {
+    top: 22%;
+    left: 70%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+  [class*="wrap-search"] {
+    top: 15%;
+    left: 53%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  /* For mobile phones: */
+  [class*="wrap-search"] {
+    top: 70%;
+    left: 70%;
+    width: 90%;
+  }
+}
+
+ /*** start : CSS for search bar ***/
+
+  .liveDataDiv{
+  position: absolute;
+  top: 16%;
+  left: 56%;
+  margin-left: -305px;
+  width: 395px;
+  background-color: #fff;
+  opacity: 85%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  line-height: 1.45;
+  border-radius: 5px;
+  border: 2px solid #00B4CC;
+  box-shadow: outset 1px 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="liveDataDiv"] {
+    top: 15%;
+    left: 98%;
+    width: 60%;
+  }
+}
+.liveDataDiv:empty{
+  display: none;
+}
+
+/* #assetSearchTableID {
+  background-color: rgba(245, 245, 245, 0.6);
+} */
+
+#assetSearchTableID td th {padding-left: 5px;}
+#assetSearchTableID th {color: black;}
+
+/* #assetSearchTableID tr:hover { font-weight: bolder; background-color: rgb(225, 225, 225); } */
+/* #assetSearchTableID tr:hover { font-weight: bolder; background-color: rgb(225, 225, 225); } */
+
+#assetSearchTableID th:nth-child(1),
+#assetSearchTableID td:nth-child(1)
+{width:75px;}
+
+#assetSearchTableID th:nth-child(2),
+#assetSearchTableID td:nth-child(2)
+{width:auto;}
+
+#assetSearchTableID td:nth-child(2):hover
+/* {font-weight: bolder; background-color: rgb(225, 225, 225);} */
+{font-weight: bolder;color: red;}
+
+#assetSearchTableID, td, th {
+  /* padding: 0px 5px 0px 5px; */
+  border: 0px;
+}
+
+#assetSearchTableID, tr {
+  text-align: center;
+  /* vertical-align: top; */
+}
+
+ /*** start : CSS for location ***/
+
+#btnCrosshair {
+  z-index: 2000;
+  position: absolute;
+  /* background-color: rgba(0, 0, 0, 0);
+  width: 20px;
+  height: 20px;
+  right: 24px;
+  bottom: 40px;
+  border: none;
+  /* background-color: #f5f7fb; */
+  /* background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 2px -2px gray; */
+
+}
+
+#btnCrosshair:hover{
+  color: #343a40;
+}
+
+#btnCrosshair.clicked {
+  color: #3a86ff;
+}
+
+.ol-legend > canvas {
+  float: left;
+}
+.ol-legend > div.ol-legend {
+  position: relative;
+}
+
+#image {
+  background-color: #eee;
+  padding: 1em;
+  clear: both;
+  display: inline-block;
+  margin: 1em 0;
+}
+
+
+.info {
+  margin: 0;
+}
+.ol-attribution {
+  bottom: 0;
+  height: 1em;
+}
+.ol-scale-line {
+  right: 0;
+  left: auto;
+  bottom: 2em;
+}
+.ol-control-title {
+  height: 2em;
+}
+.ol-print-compass {
+  top: 1.5em!important;
+}
+
+.ol-print-document .toolbarDiv {
+  display: none;
+}
+
+.ol-print-document #btnCrosshair {
+  display: none;
+}
+
+.ol-print-document .mousePosition {
+  display: none;
+}
+
+.ol-print-document .mousePosition {
+  display: none;
+}
+
+.ol-print-document .ol-scale-bar {
+left: 80%;
+}
+
+#popup1-content{
+font-size: 14px;
+line-height: 32px;
+}
+
+#popup2-content{
+  font-size: 13px;
+  line-height: 32px;
+  }
+
+  .content-section {
+    display: none;
+  }
