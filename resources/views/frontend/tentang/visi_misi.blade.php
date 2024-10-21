@@ -39,7 +39,7 @@
     <section class="container about py-5">
         <div class="card">
             <div class=" text-center wow fadeInUp">
-                <h3 class=" fs-1 fw-bold uppercase">Visis Misi</h3>
+                <h3 class=" fs-1 fw-bold uppercase">Visi Misi</h3>
             </div>
             <div class="card-body row g-5 align-items-center">
                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti minima a libero esse neque corporis fuga consectetur accusantium suscipit repellendus saepe quod distinctio minus, doloribus provident ipsam. Consectetur sed iure natus ullam blanditiis vel aliquam deserunt ipsum? Pariatur aut cupiditate, aliquam, dolor doloribus quas nesciunt fuga esse, nulla alias aperiam odio sit ducimus accusantium sequi deserunt ipsum? Exercitationem adipisci a repellendus alias iure amet soluta accusamus autem cupiditate repellat aliquam perferendis magnam fugit aut, minima pariatur! Odio quam, asperiores veritatis, incidunt sequi consequatur error quo quod consectetur architecto commodi ratione fuga dignissimos natus distinctio. Consequuntur beatae obcaecati exercitationem sit in.</p>

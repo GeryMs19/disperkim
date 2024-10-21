@@ -8,18 +8,24 @@
 
 @section('content')
 <section class="content">
-    <table id="example1" class="table table-bordered table-striped">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-5">
+              <div class="card-body">
+              <div class="table-responsive">
+                <table id="example1" class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>No</th>
-                <th>Tanggal</th>
-                <th>Nama Lengkap</th>
-                <th>No Telp Aktif </th>
-                <th>Alamat Pengaduan</th>
-                <th>NIK</th>
-                <th>Deskripsi Pengaduan</th>
-                <th>Dokumentasi Pengaduan</th>
-                <th>Status Pengaduan</th>
+                <th class="btn-primary ">No</th>
+                <th class="btn-primary ">Tanggal</th>
+                <th class="btn-primary ">Nama Lengkap</th>
+                <th class="btn-primary ">No Telp Aktif </th>
+                <th class="btn-primary ">Alamat Pengaduan</th>
+                <th class="btn-primary ">NIK</th>
+                <th class="btn-primary ">Deskripsi Pengaduan</th>
+                <th class="btn-primary ">Dokumentasi Pengaduan</th>
+                <th class="btn-primary ">Status Pengaduan</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +37,7 @@
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>12374789999637101</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -45,7 +51,7 @@
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>12374789999637101</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -59,7 +65,7 @@
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>12374789999637101</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -73,7 +79,7 @@
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>12374789999637101</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -87,7 +93,7 @@
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>12374789999637101</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -116,5 +122,64 @@
     </div>
   </div>
 </div>
+<script>
+    $(document).ready(function() {
+  var table = $('#example1').DataTable({
+    "responsive": false,
+    "lengthChange": false,
+    "buttons": [{
+                            extend: 'copy',
+                            text: '<i class="fas fa-copy"></i> Copy',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'csv',
+                            text: '<i class="fas fa-file-csv"></i> CSV',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'excel',
+                            text: '<i class="fas fa-file-excel"></i> Excel',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'pdf',
+                            text: '<i class="fas fa-file-pdf"></i> PDF',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'print',
+                            text: '<i class="fas fa-print"></i> Print',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                    ],
+    "order": [[4, 'asc']],
+    "columnDefs": [
+      { "targets": [4], "orderable": false }
+    ]
+  });
+
+  $('#filterStatus').on('change', function() {
+    var val = $(this).val();
+    table.column(8).search(val ? '^' + val + '$' : '', true, false).draw();
+  });
+  table.buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+});
+</script>
 
 @endsection

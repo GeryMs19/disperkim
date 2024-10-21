@@ -30,19 +30,25 @@
     </div>
 </div> --}}
 <section class="content">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-5">
+              <div class="card-body">
+              <div class="table-responsive">
     <table id="example1" class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>No</th>
-                <th>Tanggal</th>
-                <th>Nama Lengkap</th>
-                <th>No Telp Aktif </th>
-                <th>NIB </th>
-                <th>NIK</th>
-                <th>Alamat Pengaduan</th>
-                <th>Deskripsi Pengaduan</th>
-                <th>Dokumentasi Pengaduan</th>
-                <th>Status Pengaduan</th>
+                <th class="btn-primary">No</th>
+                <th class="btn-primary">Tanggal</th>
+                <th class="btn-primary">Nama Lengkap</th>
+                <th class="btn-primary">No Telp Aktif </th>
+                <th class="btn-primary">NIB </th>
+                <th class="btn-primary">NIK</th>
+                <th class="btn-primary">Alamat Pengaduan</th>
+                <th class="btn-primary">Deskripsi Pengaduan</th>
+                <th class="btn-primary">Dokumentasi Pengaduan</th>
+                <th class="btn-primary">Status Pengaduan</th>
             </tr>
         </thead>
         <tbody>
@@ -55,7 +61,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -70,7 +76,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -85,7 +91,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -100,7 +106,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -115,7 +121,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -130,7 +136,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
@@ -145,7 +151,7 @@
                 <td>123747899</td>
                 <td>Jl. Mangunkusuma 9, Bandar Lampung</td>
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
-                <td><button class="btn btn-sm primary-btn justify-content-center align-items-center">Lihat</button></td>
+                <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
                   <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
                   <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>

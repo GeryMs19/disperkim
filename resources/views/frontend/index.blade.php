@@ -390,7 +390,7 @@
         <!-- Offer End -->
 
         <!-- Blog Start -->
-        <section class="container-fluid blog pb-5">
+        <section id="berita" class="container-fluid blog pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Berita dan Artikel</h4>

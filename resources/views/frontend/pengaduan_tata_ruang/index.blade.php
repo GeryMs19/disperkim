@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="text-center">
-                            <button class="btn bg-primary px-5 text-white btn-lg">Simpan</button>
+                            <button class="btn bg-primary px-5 text-white btn-lg">LAPORKAN!</button>
                         </div>
                     </form>
 

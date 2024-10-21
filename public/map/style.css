@@ -162,7 +162,7 @@ background-color: rgba(22, 170, 35, 1);
 
 .toolbarDiv {
   position: flex;
-  width: 490px;
+  width: 300px;
   height: 50px;
   display: flex;
   margin: 0 auto 0;
@@ -170,12 +170,16 @@ background-color: rgba(22, 170, 35, 1);
   justify-content: center;
   gap: 3px;
   padding-bottom: 2px;
+  /* background: rgb(1,1,161);
+  background: linear-gradient(135deg, rgba(1,1,161,1) 0%, rgba(65,49,121,1) 33%, rgba(255,192,0,1) 100%); */
   background: rgb(245,247,251);
   background: linear-gradient(180deg, rgba(245,247,251,1) 0%, rgba(39,125,161,1) 82%, rgba(87,117,144,1) 100%);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   box-shadow: 0 4px 2px -2px #577590;
 }
+
+
 
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
@@ -691,10 +695,10 @@ margin: 0px auto 0px 20px;;
 /*Resize the wrap to see the search bar change!*/
 .wrap-search{
   opacity: 95%;
-  width: 55%;
+  width: 40%;
   position: absolute;
-  top: 19%;
-  left: 62%;
+  top: 10%;
+  left: 59%;
   transform: translate(-50%, -50%);
 }
 

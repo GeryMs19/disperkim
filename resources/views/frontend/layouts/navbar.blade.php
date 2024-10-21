@@ -38,13 +38,13 @@
                     <a href="team.html" class="dropdown-item">Riwayat</a>
                 </div>
             </div>
-            <a href="service.html" class="nav-item nav-link">
+            <a href="{{ route('pola-ruang') }}" class="nav-item nav-link">
                 <img id="logo_white" class="d-inline-block" style="height: 20px;" src="{{ asset('img/logo-klikprputih.png') }}">
                 <img id="logo_black" class="d-none" style="height: 20px;" src="{{ asset('img/logo-klikpritem.PNG') }}">
             </a>
-            <a href="blog.html" class="nav-item nav-link">Berita</a>
+            <a href="#berita" class="nav-item nav-link">Berita</a>
 
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="#footer" class="nav-item nav-link">Contact</a>
         </div>
         <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Login</a>
     </div>

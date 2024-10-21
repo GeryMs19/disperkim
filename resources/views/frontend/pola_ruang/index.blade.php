@@ -180,6 +180,7 @@
             <li id="li1"><a href="#info1" role="tab" title="Informasi Pola Ruang"><i class="fa fa-map-pin"></i></a></li>
             <li id="li2"><a href="#info2" role="tab" title="Informasi Ketentuan Umum Zonasi"><i class="fa fa-landmark"></i></a></li>
             <li id="li3"><a href="#info3" role="tab" title="Informasi Ketentuan Khusus"><i class="fa fa-file-alt"></i></a></li>
+            <li id="li4"><a href="#info4" role="tab" title="Print"><i class="fa fa-print"></i></a></li>
             <!-- <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
             <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li> -->
         </ul>

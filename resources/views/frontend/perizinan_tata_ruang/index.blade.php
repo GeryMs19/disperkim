@@ -85,9 +85,15 @@
                                 <input type="text" class="form-control form-control-lg" name="alamat-perizinan" id="alamat-perizinan" placeholder="Alamat Perizinan">
                             </div>
                         </div>
+                        <div class="col-lg-6 col-sm-12 py-3 px-3">
+                            <div class="mb-3 form-group">
+                                <label for="foto_perizinan" class="fs-5 fw-semibold text-dark">Dokumentasi Perizinan (Jika Ada)<span class="text-danger">*</span></label>
+                                <input type="file" class="form-control form-control-lg" name="foto_perizinan" id="foto_perizinan" placeholder="Dokumentasi Perizinan">
+                            </div>
+                        </div>
 
                         <div class="text-center">
-                            <button class="btn bg-primary px-5 text-white btn-lg">Simpan</button>
+                            <button class="btn bg-primary px-5 text-white btn-lg">SUBMIT</button>
                         </div>
                     </form>
 

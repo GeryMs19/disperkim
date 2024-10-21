@@ -83,7 +83,7 @@
         <!-- Spinner End -->
 
         <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        {{-- <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
             <div class="row gx-0 align-items-center">
                 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-flex flex-wrap">
@@ -109,13 +109,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Topbar End -->
 
         @yield('content')
 
         <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div id="footer" class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
             <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-4">

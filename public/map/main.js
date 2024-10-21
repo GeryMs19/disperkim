@@ -352,7 +352,7 @@ toolbarDivElement.className = 'toolbarDiv';
 
 // start : home Control
 // var homeButton = document.createElement('button');
-// homeButton.innerHTML = '<img src="assets/map/resources/images/home.svg" alt="" class="myImg"></img>';
+// homeButton.innerHTML = '<img src="map/resources/images/home.svg" alt="" class="myImg"></img>';
 // homeButton.className = 'myButton';
 // homeButton.title = 'Home';
 
@@ -371,7 +371,7 @@ toolbarDivElement.className = 'toolbarDiv';
 
 // start : full screen Control
 var fsButton = document.createElement('button');
-fsButton.innerHTML = '<img src="assets/map/resources/images/fullscreen.svg" alt="" class="myImg"></img>';
+fsButton.innerHTML = '<img src="map/resources/images/fullscreen.svg" alt="" class="myImg"></img>';
 fsButton.className = 'myButton';
 fsButton.title = 'Full Screen';
 
@@ -398,7 +398,7 @@ fsButton.addEventListener("click", () => {
 
 // start : Layers Control
 var lyrsButton = document.createElement('button');
-lyrsButton.innerHTML = '<img src="assets/map/resources/images/layers.svg" alt="" class="myImg"></img>';
+lyrsButton.innerHTML = '<img src="map/resources/images/layers.svg" alt="" class="myImg"></img>';
 lyrsButton.className = 'myButton';
 lyrsButton.title = 'Layers';
 
@@ -423,7 +423,7 @@ lyrsButton.addEventListener("click", () => {
 
 // start : pan Control
 var panButton = document.createElement('button');
-panButton.innerHTML = '<img src="assets/map/resources/images/pan.svg" alt="" class="myImg"></img>';
+panButton.innerHTML = '<img src="map/resources/images/pan.svg" alt="" class="myImg"></img>';
 panButton.className = 'myButton';
 panButton.id = 'panButton';
 panButton.title = 'Pan';
@@ -454,7 +454,7 @@ panButton.addEventListener("click", () => {
 if (session == 'Developer' | session == 'Super Admin' | session == 'Admin'){
 
 var markerButton = document.createElement('button');
-markerButton.innerHTML = '<img src="assets/map/resources/images/marker-tool.png" alt="" class="myImg"></img>';
+markerButton.innerHTML = '<img src="map/resources/images/marker-tool.png" alt="" class="myImg"></img>';
 markerButton.className = 'myButton';
 markerButton.id = 'markerButton';
 markerButton.title = 'Marker';
@@ -483,7 +483,7 @@ markerButton.addEventListener("click", () => {
 // start : search Control
 
 var searchButton = document.createElement('button');
-searchButton.innerHTML = '<img src="assets/map/resources/images/search.png" alt="" class="myImg"></img>';
+searchButton.innerHTML = '<img src="map/resources/images/search.png" alt="" class="myImg"></img>';
 searchButton.className = 'myButton';
 searchButton.id = 'searchButton';
 searchButton.title = 'Search';
@@ -519,7 +519,7 @@ zoomInInteraction.on('boxend', function () {
 });
 
 var ziButton = document.createElement('button');
-ziButton.innerHTML = '<img src="assets/map/resources/images/zoomIn.svg" alt="" class="myImg"></img>';
+ziButton.innerHTML = '<img src="map/resources/images/zoomIn.svg" alt="" class="myImg"></img>';
 ziButton.className = 'myButton';
 ziButton.id = 'ziButton';
 ziButton.title = 'Zoom In';
@@ -555,7 +555,7 @@ zoomOutInteraction.on('boxend', function () {
 });
 
 var zoButton = document.createElement('button');
-zoButton.innerHTML = '<img src="assets/map/resources/images/zoomOut.png" alt="" class="myImg"></img>';
+zoButton.innerHTML = '<img src="map/resources/images/zoomOut.png" alt="" class="myImg"></img>';
 zoButton.className = 'myButton';
 zoButton.id = 'zoButton';
 zoButton.title = 'Zoom Out';
@@ -583,7 +583,7 @@ zoButton.addEventListener("click", () => {
 
 // start : FeatureInfo Control
 var featureInfoButton = document.createElement('button');
-featureInfoButton.innerHTML = '<img src="assets/map/resources/images/identify.svg" alt="" class="myImg"></img>';
+featureInfoButton.innerHTML = '<img src="map/resources/images/identify.svg" alt="" class="myImg"></img>';
 featureInfoButton.className = 'myButton';
 featureInfoButton.id = 'featureInfoButton';
 featureInfoButton.title = 'Feature Info';
@@ -981,7 +981,7 @@ map.on('singleclick', function (evt) {
 
 // start : Length and Area Measurement Control
 var lengthButton = document.createElement('button');
-lengthButton.innerHTML = '<img src="assets/map/resources/images/measure-length.png" alt="" class="myImg"></img>';
+lengthButton.innerHTML = '<img src="map/resources/images/measure-length.png" alt="" class="myImg"></img>';
 lengthButton.className = 'myButton';
 lengthButton.id = 'lengthButton';
 lengthButton.title = 'Measure Length';
@@ -1010,7 +1010,7 @@ lengthButton.addEventListener("click", () => {
 })
 
 var areaButton = document.createElement('button');
-areaButton.innerHTML = '<img src="assets/map/resources/images/measure-area.png" alt="" class="myImg"></img>';
+areaButton.innerHTML = '<img src="map/resources/images/measure-area.png" alt="" class="myImg"></img>';
 areaButton.className = 'myButton';
 areaButton.id = 'areaButton';
 areaButton.title = 'Measure Area';
@@ -1258,7 +1258,7 @@ var formatArea = function (polygon) {
 // start : attribute query
 if (session == 'Developer' | session == 'Super Admin' | session == 'Admin'){
 var qryButton = document.createElement('button');
-qryButton.innerHTML = '<img src="assets/map/resources/images/query.svg" alt="" class="myImg"></img>';
+qryButton.innerHTML = '<img src="map/resources/images/query.svg" alt="" class="myImg"></img>';
 qryButton.className = 'myButton';
 qryButton.id = 'qryButton';
 qryButton.title = 'Attribute Query';
@@ -1520,7 +1520,7 @@ function newaddRowHandlers() {
 // start : spatial query
 if (session == 'Developer' | session == 'Super Admin' | session == 'Admin'){
 var bufferButton = document.createElement('button');
-bufferButton.innerHTML = '<img src="assets/map/resources/images/mapSearch.png" alt="" class="myImg"></img>';
+bufferButton.innerHTML = '<img src="map/resources/images/mapSearch.png" alt="" class="myImg"></img>';
 bufferButton.className = 'myButton';
 bufferButton.id = 'bufferButton';
 bufferButton.title = 'Spatial Query';
@@ -1620,7 +1620,7 @@ var selectedFeatureOverlay = new ol.layer.Vector({
 });
 
 var startEditingButton = document.createElement('button');
-startEditingButton.innerHTML = '<img src="assets/map/resources/images/edit.png" alt="" class="myImg"></img>';
+startEditingButton.innerHTML = '<img src="map/resources/images/edit.png" alt="" class="myImg"></img>';
 startEditingButton.className = 'myButton';
 startEditingButton.id = 'startEditingButton';
 startEditingButton.title = 'Start Editing';
@@ -1693,7 +1693,7 @@ startEditingButton.addEventListener("click", () => {
 var editingControlsDivElement = document.getElementById('editingControlsDiv');
 
 var addFeatureButton = document.createElement('button');
-addFeatureButton.innerHTML = '<img src="assets/map/resources/images/editAdd.png" alt="" class="myImg"></img>';
+addFeatureButton.innerHTML = '<img src="map/resources/images/editAdd.png" alt="" class="myImg"></img>';
 addFeatureButton.className = 'myButton';
 addFeatureButton.id = 'addFeatureButton';
 addFeatureButton.title = 'Add Feature';
@@ -1796,7 +1796,7 @@ function addFeature(evt) {
 
 // start : Modify Feature Control
 var modifyFeatureButton = document.createElement('button');
-modifyFeatureButton.innerHTML = '<img src="assets/map/resources/images/editModify.svg" alt="" class="myImg"></img>';
+modifyFeatureButton.innerHTML = '<img src="map/resources/images/editModify.svg" alt="" class="myImg"></img>';
 modifyFeatureButton.className = 'myButton';
 modifyFeatureButton.id = 'modifyFeatureButton';
 modifyFeatureButton.title = 'Modify Feature';
@@ -1979,7 +1979,7 @@ var transactWFS = function (mode, f) {
 
 // start : Modify Attribute
 var modifyAttributeButton = document.createElement('button');
-modifyAttributeButton.innerHTML = '<img src="assets/map/resources/images/query.svg" alt="" class="myImg"></img>';
+modifyAttributeButton.innerHTML = '<img src="map/resources/images/query.svg" alt="" class="myImg"></img>';
 modifyAttributeButton.className = 'myButton';
 modifyAttributeButton.id = 'modifyFeatureButton';
 modifyAttributeButton.title = 'Modify Attribute';
@@ -2906,7 +2906,7 @@ var transactWFS = function (mode, f) {
 
 // start : Delete feature control
 var deleteFeatureButton = document.createElement('button');
-deleteFeatureButton.innerHTML = '<img src="assets/map/resources/images/editErase.svg" alt="" class="myImg"></img>';
+deleteFeatureButton.innerHTML = '<img src="map/resources/images/editErase.svg" alt="" class="myImg"></img>';
 deleteFeatureButton.className = 'myButton';
 deleteFeatureButton.id = 'deleteFeatureButton';
 deleteFeatureButton.title = 'Delete Feature';
@@ -3056,7 +3056,7 @@ function stopAutolocate() {
 // start : settings Control
 if (session == 'Developer' | session == 'Super Admin'){
 var settingsButton = document.createElement('button');
-settingsButton.innerHTML = '<img src="assets/map/resources/images/settings.svg" alt="" class="myImg"></img>';
+settingsButton.innerHTML = '<img src="map/resources/images/settings.svg" alt="" class="myImg"></img>';
 settingsButton.className = 'myButton';
 settingsButton.id = 'settingButton';
 settingsButton.title = 'Settings';
@@ -3106,7 +3106,7 @@ inputBox.onkeyup = function () {
                 createLiveSearchTable();
 
                 $.ajax({
-                    url: 'assets/map/resources/custom/fetch.php',
+                    url: 'map/resources/custom/fetch.php',
                     type: 'post',
                     data: { request: 'liveSearch', searchTxt: txtVal, searchLayer: 'public.'+ jaringanjalanLayer , searchAttribute: 'd_nop' },
                     dataType: 'json',
@@ -3116,7 +3116,7 @@ inputBox.onkeyup = function () {
                 });
 
                 $.ajax({
-                    url: 'assets/map/resources/custom/fetch.php',
+                    url: 'map/resources/custom/fetch.php',
                     type: 'post',
                     data: { request: 'liveSearch', searchTxt: txtVal, searchLayer: 'public.'+ jaringanjalanLayer , searchAttribute: 'name' },
                     dataType: 'json',
@@ -3127,7 +3127,7 @@ inputBox.onkeyup = function () {
 
 
                 $.ajax({
-                    url: 'assets/map/resources/custom/fetch.php',
+                    url: 'map/resources/custom/fetch.php',
                     type: 'post',
                     data: { request: 'liveSearch', searchTxt: txtVal, searchLayer: 'public.'+ admkecLayer , searchAttribute: 'kecamatan' },
                     dataType: 'json',
@@ -3137,7 +3137,7 @@ inputBox.onkeyup = function () {
                 });
 
                 $.ajax({
-                    url: 'assets/map/resources/custom/fetch.php',
+                    url: 'map/resources/custom/fetch.php',
                     type: 'post',
                     data: { request: 'liveSearch', searchTxt: txtVal, searchLayer: 'public.'+ asetLayer , searchAttribute: 'nama_aset' },
                     dataType: 'json',
@@ -3537,7 +3537,7 @@ $(function () {
               anchor: [0.5, 0.5],
               anchorXUnits: 'fraction',
               anchorYUnits: 'fraction',
-              src: '/assets/map/resources/images/marker.png',
+              src: '/map/resources/images/marker.png',
               scale: 0.02
             })})
         var labelStyle = new ol.style.Style({
@@ -3907,7 +3907,7 @@ $(function () {
 
 $('#li1').addClass('active');
 $('#sidebar2').removeClass('collapsed')
-content1.innerHTML = '<center><IMG SRC="https://klikpr.kkp.my.id/assets/gif/loading.gif" width="60%" height="60%"></center>';
+content1.innerHTML = '<center><IMG SRC="https://klikpr.kkp.my.id/gif/loading.gif" width="60%" height="60%"></center>';
 content2a.innerHTML = '-';
 content2b.innerHTML = '-';
 content2c.innerHTML = '-';
