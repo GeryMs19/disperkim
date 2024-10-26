@@ -3,6 +3,18 @@
 @section('content')
 @include('frontend.layouts.map.header')
 
+<style>
+    .clickable-image {
+        transition: outline 0.2s ease-in-out;
+    }
+
+    .clickable-image:focus,
+    .clickable-image:active {
+        outline: 3px solid #000; /* Atur warna outline sesuai keinginan */
+        outline-offset: 3px;
+    }
+</style>
+
 <div id="map">
     <div class ="ol-loc ol-unselectable ol-control">
     <button id="btnCrosshair" title="Live Location">
@@ -181,6 +193,7 @@
             <li id="li2"><a href="#info2" role="tab" title="Informasi Ketentuan Umum Zonasi"><i class="fa fa-landmark"></i></a></li>
             <li id="li3"><a href="#info3" role="tab" title="Informasi Ketentuan Khusus"><i class="fa fa-file-alt"></i></a></li>
             <li id="li4"><a href="#info4" role="tab" title="Print"><i class="fa fa-print"></i></a></li>
+            <li id="li5"><a href="#info5" role="tab" title="Layer"><i class="fas fa-layer-group"></i></a></li>
             <!-- <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
             <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li> -->
         </ul>
@@ -208,9 +221,9 @@
             <!-- <a href="#" id="popup-closer" class="ol-popup-closer"></a> -->
             <br/>
                 <div class="col-6 btn-group gap-1 mr-1 mb-1">
-                <button type="button" class="btn btn-success segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Diperbolehkan</button>
-                <button type="button" class="btn btn-warning segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Diperbolehkan Bersyarat</button>
-                <button type="button" class="btn btn-danger segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Tidak Diperbolehkan</button>
+                <button type="button" class="btn btn-success segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1" style="color:black;">Diperbolehkan</button>
+                <button type="button" class="btn btn-warning segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="color:black;">Diperbolehkan Bersyarat</button>
+                <button type="button" class="btn btn-danger segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="color:black;">Tidak Diperbolehkan</button>
                 </div>
                 <div class="col-12 btn-group gap-1 mb-2">
                 <button type="button" class="btn btn-primary segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Intensitas Pemanfaatan Ruang</button>
@@ -295,10 +308,131 @@
             </div>
             </div>
 
+        </div>
+
+        <div class="sidebar2-pane" id="info4">
+            <h1 class="sidebar2-header">Print<span class="sidebar2-close"><i class="fa fa-caret-left"></i></span></h1>
+            <div id="popup" class="ol-popup"></div>
+            <!-- <a href="#" id="popup-closer" class="ol-popup-closer"></a> -->
+            <br/>
+            <div class="btn-group gap-1 d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-primary segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">KP2B</button>
+                <button type="button" class="btn btn-primary segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">KRB</button>
+                <button type="button" class="btn btn-primary segmentedButton" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Resapan Air</button>
+            </div>
+
+
+            <div class="collapse multi-collapse" id="collapse1">
+            <div class="card card-body">
+                <h4><u>Kawasan Pertanian Pangan Berkelanjutan</u></h4>
+                <p><div id="popup3a-content"></div></p>
+            </div>
+            </div>
+
+            <div class="collapse multi-collapse" id="collapse2">
+            <div class="card card-body">
+                <h4><u>Kawasan Rawan Bencana</u></h4>
+                <p><div id="popup3b-content"></div></p>
+            </div>
+            </div>
+
+            <div class="collapse multi-collapse" id="collapse3">
+            <div class="card card-body">
+                <h4><u>Resapan Air</u></h4>
+                <p><div id="popup3c-content"></div></p>
+            </div>
+            </div>
 
 
 
 
+
+        </div>
+
+        <div class="sidebar2-pane" id="info5">
+            <h1 class="sidebar2-header">Layer Peta<span class="sidebar2-close"><i class="fa fa-caret-left"></i></span></h1>
+            <div id="popup" class="ol-popup"></div>
+            <!-- <a href="#" id="popup-closer" class="ol-popup-closer"></a> -->
+            <br/>
+            <div class="row pb-3">
+                <div class="col-4">
+                    <div class="card mb-4 text-white bg-transparent border-0 ">
+                        <a class="d-flex flex-col align-items-center" href="#">
+                            <img src="{{ asset('img/satelite.webp') }}" alt="" class="img-fluid clickable-image" tabindex="0">
+                            <p class="text-center pb-1 text-black">
+                               Google Satelite
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4 text-white bg-transparant border-0">
+                        <a class="d-flex flex-col align-items-center" href="#">
+                            <img src="{{ asset('img/hybrid.png') }}" alt="" class="img-fluid clickable-image" tabindex="0">
+                            <p class="text-center pb-1 text-black">
+                                Google Hybrid
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4 text-white bg-transparant border-0">
+                        <a href="#">
+                            <img src="{{ asset('img/streetmap.png') }}" alt="" class="img-fluid clickable-image" tabindex="0">
+                            <p class="text-center pb-1 text-black">
+                                Google Street
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card px-2 bg-primary text-white">
+                <p class="fs-5 pb-2">Pilih berdasarkan: </p>
+            </div>
+
+            <div class="card px-3 py-3">
+                <div class="pb-3">
+                    <input type="checkbox" name="adm_kecamatan" id="adm_kecamatan">
+                    <label class="px-2" for="adm_kecamatan">Admin Kecamatan</label>
+                </div>
+                <div class="pb-3">
+                    <input type="checkbox" name="pola_ruang" id="pola_ruang">
+                    <label class="px-2" for="pola_ruang">Pola Ruang</label>
+                </div>
+                <div class="pb-3">
+                    <input type="checkbox" name="jaringan_jalan" id="jaringan_jalan">
+                    <label class="px-2" for="jaringan_jalan">Jaringan Jalan</label>
+                </div>
+                <div class="pb-3">
+                    <input type="checkbox" name="kode" id="kode">
+                    <label class="px-2" for="kode">Kode Kawasan</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="lain" id="lain">
+                    <label class="px-2" for="lain">Lainnya</label>
+                </div>
+            </div>
+
+            <div class="collapse multi-collapse" id="collapse1">
+            <div class="card card-body">
+                <h4><u>Kawasan Pertanian Pangan Berkelanjutan</u></h4>
+                <p><div id="popup3a-content"></div></p>
+            </div>
+            </div>
+
+            <div class="collapse multi-collapse" id="collapse2">
+            <div class="card card-body">
+                <h4><u>Kawasan Rawan Bencana</u></h4>
+                <p><div id="popup3b-content"></div></p>
+            </div>
+            </div>
+
+            <div class="collapse multi-collapse" id="collapse3">
+            <div class="card card-body">
+                <h4><u>Resapan Air</u></h4>
+                <p><div id="popup3c-content"></div></p>
+            </div>
+            </div>
         </div>
 
         <div class="sidebar2-pane" id="messages">
