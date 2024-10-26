@@ -39,8 +39,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -53,8 +53,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -67,8 +67,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -81,8 +81,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -95,8 +95,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
         </tbody>
@@ -108,19 +108,69 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
         </button>
       </div>
       <div class="modal-body">
         Modal Content Goes Here
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-        <!-- Additional buttons can be added here -->
-      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+      <!-- Additional buttons can be added here -->
     </div>
   </div>
+</div>
+</div>
+<!-- Modal Terima -->
+<div class="modal fade" id="modalTerima">
+<div class="modal-dialog">
+<form class="modal-content">
+
+<!-- Header modal -->
+<div class="modal-header">
+  <h4 class="modal-title">Terima Pengajuan</h4>
+  <button type="button" class="btn-close" data-bs-dismiss="modal"><span aria-hidden="true"></span>
+  </button>
+</div>
+
+<!-- Isi modal -->
+<div class="modal-body">
+  <p>Apakah Anda yakin ingin menerima pengajuan ini?</p>
+</div>
+
+<!-- Footer modal -->
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+  <button type="button" class="btn btn-success">Terima</button>
+</div>
+
+</form>
+</div>
+</div>
+<div class="modal fade" id="modalTolak">
+<div class="modal-dialog">
+<form action="" class="modal-content">
+
+<!-- Header modal -->
+<div class="modal-header">
+  <h4 class="modal-title">Tolak Pengajuan</h4>
+  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<!-- Isi modal -->
+<div class="modal-body">
+      <label for="keterangan">Alasan Penolakan</label>
+      <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
+</div>
+
+<!-- Footer modal -->
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+  <button type="button" class="btn btn-danger">Tolak</button>
+</div>
+
+</form>
+</div>
 </div>
 <script>
     $(document).ready(function() {

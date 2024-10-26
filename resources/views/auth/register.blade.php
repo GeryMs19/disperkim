@@ -1,74 +1,150 @@
-<x-auth-layout>
-    <x-slot name="title">
-        @lang('Register')
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Card - CoreUI</title>
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.0.0/dist/css/coreui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            position: relative;
+            min-height: 100vh;
+            overflow-y: auto; /* Enable vertical scroll */
+        }
 
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+        /* Background Image */
+        .background-blur {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('{{ asset('img/map4.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: blur(8px); /* Add blur effect */
+            z-index: -1; /* Make sure it's behind the card */
+        }
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        /* Container for Login Card */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* To add some space for small screens */
+            position: relative;
+            z-index: 1; /* Ensure login form is on top of background */
+        }
 
-        <!-- Social login -->
-        <x-auth-social-login />
+        /* Login Card Style */
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 1); /* Slight transparency */
+        }
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+        .login-card .card-body {
+            padding: 2rem;
+        }
 
-            <!-- First Name -->
-            <div class="mt-4">
-                <x-label for="first_name" :value="__('First Name')" />
+        .login-card .form-control {
+            border-radius: 10px;
+        }
 
-                <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus />
+        .login-card .btn-primary {
+            border-radius: 10px;
+        }
+
+        /* Button Style */
+        .btn-primary {
+            background-color: #0A517D !important;
+        }
+
+        /* Scrollable on small screens */ {
+            .login-container {
+                align-items: flex-start;
+            }
+            .login-card {
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+        }
+
+        /* Additional responsiveness for smaller devices */
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Image with Blur Effect -->
+    <div class="background-blur"></div>
+
+    <!-- Login Container -->
+    <div class="container login-container">
+        <div class="card login-card">
+            <div class="row d-flex justify-content-center align-items-center pt-4 px-4 pb-2">
+                <div class="col-md-3 text-center">
+                    <img class="p-2" src="{{ asset('img/logo-perkim.png') }}" alt="Logo" style="width: 60px;">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b><p class="m-0 p-0 fs-5">REGISTER PAGE</p></b>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="p-2" src="{{ asset('img/logo-klikpr.png') }}" alt="Logo" style="width: 60px;">
+                </div>
+                <p class="text-center pt-3">Selamat Datang di website DISPERKIM<br>Silahkan daftar untuk masuk pada sistem</p>
             </div>
-
-            <!-- Last Name -->
-            <div class="mt-4">
-                <x-label for="last_name" :value="__('Last Name')" />
-
-                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus />
+            <div class="card-body pt-2">
+                <form>
+                    <div class="mb-3">
+                        <label for="nama_lengkap" class="form-label">Nama Lengkap </label>
+                        <input type="text" class="form-control" id="nama_lengkap" placeholder="Enter your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nik" class="form-label"> NIK </label>
+                        <input type="text" class="form-control" id="nik" placeholder="Enter your NIK">
+                    </div>
+                    <div class="mb-3">
+                        <label for="no_telp" class="form-label"> No HP/Telp Aktif </label>
+                        <input type="text" class="form-control" id="no_telp" placeholder="Enter your Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label"> Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm_password" placeholder="Enter Again your password">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="acceptapble">
+                        <label class="form-check-label" for="acceptapble">Saya telah mengisi data di atas dengan benar</label>
+                    </div>
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class="btn btn-primary text-white">DAFTAR <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                    </div>
+                    <div class="text-center">
+                        <p>Sudah Punya Akun? <a href="#" class="text-active">Login</a></p>
+                    </div>
+                </form>
             </div>
+        </div>
+    </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <!-- <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a> -->
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-
-        <x-slot name="extra">
-            <p class="text-center text-gray-600 mt-4">
-                Already have an account? <a href="{{ route('login') }}" class="underline hover:text-gray-900">Login</a>.
-            </p>
-        </x-slot>
-    </x-auth-card>
-</x-auth-layout>
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.0.0/dist/js/coreui.bundle.min.js"></script>
+</body>
+</html>

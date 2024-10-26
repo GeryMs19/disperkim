@@ -49,7 +49,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>Usaha Cafe</td>
                   <td>1 Tahun</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-success">Diterima</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -67,7 +67,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>Usaha Cafe</td>
                   <td>1 Tahun</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-danger">Ditolak</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -85,7 +85,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>Usaha Cafe</td>
                   <td>1 Tahun</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-warning">Menunggu</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -103,7 +103,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>Usaha Cafe</td>
                   <td>1 Tahun</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-success">Diterima</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -121,7 +121,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>Usaha Cafe</td>
                   <td>1 Tahun</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-success">Diterima</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -148,15 +148,14 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           </button>
         </div>
         <div class="modal-body">
           Modal Content Goes Here
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
           <!-- Additional buttons can be added here -->
         </div>
       </div>

@@ -45,7 +45,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>11893791031013838</td>
                   <td>lorem ipsum blablablablablaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaa</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-success">Diterima</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -61,7 +61,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>11893791031013838</td>
                   <td>lorem ipsum blablablablablaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaa</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-danger">Ditolak</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -77,7 +77,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>11893791031013838</td>
                   <td>lorem ipsum blablablablablaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaa</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-warning">Menunggu</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -93,7 +93,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>11893791031013838</td>
                   <td>lorem ipsum blablablablablaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaa</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-warning">Menunggu</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
@@ -109,7 +109,7 @@
                   <td>Jl Mangga, Harapan Jaya, Bandar Lampung</td>
                   <td>11893791031013838</td>
                   <td>lorem ipsum blablablablablaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaaaaaaaaaaaaa blaaaaaaaaaaaaaaaa</td>
-                  <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                  <td><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerkas">Lihat</button></td>
                   <td><p class="small text-center rounded bg-danger">Ditolak</p></td>
                   <td class="text-center">
                     <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>

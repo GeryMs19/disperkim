@@ -99,6 +99,9 @@ Route::get('/pola-ruang', function() {
 
 // Auth Routes
 require __DIR__.'/auth.php';
+Route::get('/registrasi', function() {
+    return view('auth.register');
+})->name('registrasi');
 
 // Language Switch
 Route::get('language/{language}', [LanguageController::class, 'switch'])->name('language.switch');

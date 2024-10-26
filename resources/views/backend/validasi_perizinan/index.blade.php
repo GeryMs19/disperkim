@@ -63,8 +63,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -78,8 +78,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -93,8 +93,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -108,8 +108,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -123,8 +123,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -138,8 +138,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
             <tr>
@@ -153,8 +153,8 @@
                 <td>Rumah yang dibangun melewati batas tanah saya bla bla bla bla</td>
                 <td><button type="button" class="btn btn-sm btn-primary">Lihat</button></td>
                 <td>
-                  <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</button>
+                  <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</button>
                 </td>
             </tr>
 
@@ -167,15 +167,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
         </button>
       </div>
       <div class="modal-body">
         Modal Content Goes Here
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
         <!-- Additional buttons can be added here -->
       </div>
     </div>
@@ -189,7 +188,7 @@
   <!-- Header modal -->
   <div class="modal-header">
     <h4 class="modal-title">Terima Pengajuan</h4>
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
   </div>
 
   <!-- Isi modal -->
@@ -199,7 +198,7 @@
 
   <!-- Footer modal -->
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
     <button type="button" class="btn btn-success">Terima</button>
   </div>
 
@@ -213,7 +212,7 @@
   <!-- Header modal -->
   <div class="modal-header">
     <h4 class="modal-title">Tolak Pengajuan</h4>
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
   </div>
 
   <!-- Isi modal -->
@@ -224,7 +223,7 @@
 
   <!-- Footer modal -->
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
     <button type="button" class="btn btn-danger">Tolak</button>
   </div>
 
